@@ -84,14 +84,16 @@ const style = `
 }
 `
 
-export function inject({ config, posthog }) {
+export function inject({ config, posthog, attachments }) {
 
   // Create shadow root
   const shadow = createShadow(style)
 
   console.log(config)
+  console.log(attachments)
   console.log(config.articles)
-  console.log(config.hello)
+  console.log(config.json)
+  console.log(JSON.parse(config.json))
   console.log(window.location.href)
 
   // Find the article for the current URL

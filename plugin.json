@@ -10,24 +10,15 @@
         "name": "Articles",
         "type": "attachment",
         "hint": "A JSON file with a list of article objects with a URL to show on, content to link to, and a call-to-action.",
-        "default": {
-          "articles": [
-            {
-              "url": "http://localhost:3040/",
-              "content": "https://posthog.com/tutorials",
-              "cta": "Check out this cool tutorial"
-            }
-          ]
-        },
         "required": true,
         "site": true
       },
       {
-        "key": "hello",
-        "name": "hello",
+        "key": "json",
+        "name": "json",
         "type": "string",
-        "hint": "The call-to-action to show on the article.",
-        "default": "Check out this cool tutorial",
+        "hint": "A JSON tring with a list of article objects with a URL to show on, content to link to, and a call-to-action.",
+        "default": "{\"articles\":[{\"url\":\"http://localhost:3040/\",\"content\":\"https://posthog.com/tutorials\",\"cta\":\"Check out our tutorials\"},{\"url\":\"http://localhost:3000/\",\"content\":\"https://posthog.com/blog\",\"cta\":\"Check out our blog\"}]}",
         "required": true,
         "site": true
       }
