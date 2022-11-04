@@ -94,6 +94,8 @@ export function inject({ config, posthog }) {
   // Find the article for the current URL
   const currentUrl = window.location.href
 
+  console.log(config)
+
   const article = findArticleObject(article_objects, currentUrl, config.match_mode)
 
   // If the article doesn't exist, return
