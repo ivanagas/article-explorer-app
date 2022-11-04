@@ -8,7 +8,7 @@
       {
         "key": "articles",
         "name": "Articles",
-        "type": "json",
+        "type": "attachment",
         "hint": "A JSON file with a list of article objects with a URL to show on, content to link to, and a call-to-action.",
         "default": {
           "articles": [
