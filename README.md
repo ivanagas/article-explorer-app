@@ -10,27 +10,27 @@ Show relevant articles on specific pages.
 
 ## Configuration
 
-List articles you'd like to link to with the URL where you'd like them showing and the CTA you'd like to show. For example:
+Create a JSON string with a list of articles you'd like to link to with the URL where you'd like them showing and the CTA you'd like to show. For example:
 ```json
 {
-  [
+  "articles": [
     {
       "url": "https://app.posthog.com/insights",
       "content": "https://posthog.com/blog/aarrr-pirate-funnel",
       "cta": "Want one insight to rule them all? Build an AARRR funnel."
-    }
+    },
     {
       "url": "https://app.posthog.com/data-management/events",
       "content": "https://posthog.com/tutorials/fewer-unwanted-events",
       "cta": "Too much noise? Find out how to capture fewer unwanted events."
-    },
+    }
   ]
 }
 ```
 
 ## Development
 
-If you wish to make this a juicier example app, then clone the repo and run the following:
+Clone the repo and run the following:
 ```bash
 npx @posthog/app-dev-server
 ```
@@ -50,4 +50,3 @@ Then browse to http://localhost:3040/, open `site.ts` in an editor, and hack awa
   - use regex
   - use wildcards
 - customize styling
-- attach a json file

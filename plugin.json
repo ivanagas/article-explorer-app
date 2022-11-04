@@ -7,7 +7,7 @@
       },
       {
         "key": "json",
-        "name": "json",
+        "name": "Article objects JSON",
         "type": "string",
         "hint": "A JSON string with a list of article objects with a URL to show on, content to link to, and a call-to-action.",
         "default": "{\"articles\":[{\"url\":\"http://localhost:3040/\",\"content\":\"https://posthog.com/tutorials\",\"cta\":\"Check out our tutorials\"},{\"url\":\"http://localhost:3000/\",\"content\":\"https://posthog.com/blog\",\"cta\":\"Check out our blog\"}]}",
