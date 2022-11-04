@@ -93,7 +93,8 @@ export function inject({ config, posthog }) {
 
   // Find the article for the current URL
   const currentUrl = window.location.href
-  const article = article_objects['articles'].find((article) => article.url === currentUrl)
+
+  const article = findArticleObject(article_objects, currentUrl, config.match_mode)
 
   // If the article doesn't exist, return
   if (!article || !article.cta || !article.content) {
@@ -148,6 +149,28 @@ export function inject({ config, posthog }) {
   explorerLink.setAttribute('href', article.content)
 
   shadow.appendChild(explorerElement)
+}
+
+function findArticleObject(article_objects, currentUrl, match_mode) {
+  // Find the article exact match
+  if (match_mode === 'exact') {
+    return article_objects['articles'].find((article) => article.url === currentUrl)
+  }
+
+  // Find the article that includes path (match)
+  if (match_mode === 'contains') {
+    return article_objects['articles'].find((article) => currentUrl.includes(article.url))
+  }
+
+  // Find the article wildcard match
+  if (match_mode === 'wildcard') {
+    return article_objects['articles'].find((article) => {
+      const regex = new RegExp(article.url.replace(/\*/g, '.*'))
+      return regex.test(currentUrl)
+    })
+  }
+
+  return null
 }
 
 function createShadow(style?: string): ShadowRoot {
