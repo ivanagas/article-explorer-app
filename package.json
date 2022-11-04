@@ -1,0 +1,13 @@
+{
+  "name": "article-explorer-app",
+  "version": "1.0.0",
+  "description": "A PostHog site app for showing relevant articles on specific pages.",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@posthog/app-dev-server": "^1.1.1"
+  },
+  "scripts": {
+    "start": "app-dev-server"
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "Article explorer",
+    "description": "Show relevant articles on specific pages.",
+    "config": [
+        {
+            "markdown": "## MANUAL STEP NOTICE: This app needs to injects code into your website through posthog-js. You need to **opt-in** on your site to enable this behaviour.\n\n```\nposthog.init(\"api_key\", {\n  \"api_host\": \"https://app.posthog.com\",\n  \"opt_in_site_apps\": true,\n})\n```"
+        },
+      {
+        "key": "articles",
+        "name": "Articles",
+        "type": "array",
+        "hint": "A list of article objects with a URL to show on, content to link to, and a call-to-action.",
+        "default": [
+            {
+                "url": "http://localhost:3040/",
+                "content": "https://posthog.com/",
+                "cta": "This is a test CTA."
+            }
+        ],
+        "required": true,
+        "site": true
+      }
+    ]
+  }
+  
