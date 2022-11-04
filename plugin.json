@@ -8,15 +8,17 @@
       {
         "key": "articles",
         "name": "Articles",
-        "type": "array",
-        "hint": "A list of article objects with a URL to show on, content to link to, and a call-to-action.",
-        "default": [
+        "type": "json",
+        "hint": "A JSON file with a list of article objects with a URL to show on, content to link to, and a call-to-action.",
+        "default": {
+          "articles": [
             {
-                "url": "http://localhost:3040/",
-                "content": "https://posthog.com/",
-                "cta": "This is a test CTA."
+              "url": "http://localhost:3040/",
+              "content": "https://posthog.com/tutorials",
+              "cta": "Check out this cool tutorial"
             }
-        ],
+          ]
+        },
         "required": true,
         "site": true
       }

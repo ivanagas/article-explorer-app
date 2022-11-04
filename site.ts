@@ -91,7 +91,7 @@ export function inject({ config, posthog }) {
 
   // Find the article for the current URL
   const currentUrl = window.location.href
-  const article = config.articles.find((article) => article.url === currentUrl)
+  const article = config.articles['articles'].find((article) => article.url === currentUrl)
 
   // If the article doesn't exist, return
   if (!article || !article.cta || !article.content) {
