@@ -27,13 +27,6 @@ Create a JSON string with a list of articles you'd like to link to with the URL 
   ]
 }
 ```
-Paste the modified JSON string into the Article objects JSON field. You can add as many articles as you'd like.
-
-### Match mode
-Match mode options
-- `exact`: Only show the article if the page URL exactly matches the article URL
-- `contains`: Show the article if the page URL contains the article URL
-- `wildcard`: Show the article if the page URL matches the article URL which can contain wildcards (`*`)
 
 ## Development
 
