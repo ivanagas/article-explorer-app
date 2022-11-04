@@ -21,6 +21,15 @@
         },
         "required": true,
         "site": true
+      },
+      {
+        "key": "hello",
+        "name": "hello",
+        "type": "string",
+        "hint": "The call-to-action to show on the article.",
+        "default": "Check out this cool tutorial",
+        "required": true,
+        "site": true
       }
     ]
   }
