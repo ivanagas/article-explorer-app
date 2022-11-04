@@ -96,9 +96,11 @@ export function inject({ config, posthog, attachments }) {
   console.log(JSON.parse(config.json))
   console.log(window.location.href)
 
+  const article_objects = JSON.parse(config.json)
+
   // Find the article for the current URL
   const currentUrl = window.location.href
-  const article = config.articles['articles'].find((article) => article.url === currentUrl)
+  const article = article_objects['articles'].find((article) => article.url === currentUrl)
 
   // If the article doesn't exist, return
   if (!article || !article.cta || !article.content) {
