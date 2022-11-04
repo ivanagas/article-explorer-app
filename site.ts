@@ -84,17 +84,10 @@ const style = `
 }
 `
 
-export function inject({ config, posthog, attachments }) {
+export function inject({ config, posthog }) {
 
   // Create shadow root
   const shadow = createShadow(style)
-
-  console.log(config)
-  console.log(attachments)
-  console.log(config.articles)
-  console.log(config.json)
-  console.log(JSON.parse(config.json))
-  console.log(window.location.href)
 
   const article_objects = JSON.parse(config.json)
 

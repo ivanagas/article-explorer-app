@@ -2,22 +2,14 @@
     "name": "Article explorer",
     "description": "Show relevant articles on specific pages.",
     "config": [
-        {
-            "markdown": "## MANUAL STEP NOTICE: This app needs to injects code into your website through posthog-js. You need to **opt-in** on your site to enable this behaviour.\n\n```\nposthog.init(\"api_key\", {\n  \"api_host\": \"https://app.posthog.com\",\n  \"opt_in_site_apps\": true,\n})\n```"
-        },
       {
-        "key": "articles",
-        "name": "Articles",
-        "type": "attachment",
-        "hint": "A JSON file with a list of article objects with a URL to show on, content to link to, and a call-to-action.",
-        "required": true,
-        "site": true
+          "markdown": "## MANUAL STEP NOTICE: This app needs to injects code into your website through posthog-js. You need to **opt-in** on your site to enable this behaviour.\n\n```\nposthog.init(\"api_key\", {\n  \"api_host\": \"https://app.posthog.com\",\n  \"opt_in_site_apps\": true,\n})\n```"
       },
       {
         "key": "json",
         "name": "json",
         "type": "string",
-        "hint": "A JSON tring with a list of article objects with a URL to show on, content to link to, and a call-to-action.",
+        "hint": "A JSON string with a list of article objects with a URL to show on, content to link to, and a call-to-action.",
         "default": "{\"articles\":[{\"url\":\"http://localhost:3040/\",\"content\":\"https://posthog.com/tutorials\",\"cta\":\"Check out our tutorials\"},{\"url\":\"http://localhost:3000/\",\"content\":\"https://posthog.com/blog\",\"cta\":\"Check out our blog\"}]}",
         "required": true,
         "site": true
