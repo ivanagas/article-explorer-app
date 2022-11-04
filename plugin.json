@@ -13,6 +13,15 @@
         "default": "{\"articles\":[{\"url\":\"http://localhost:3040/\",\"content\":\"https://posthog.com/tutorials\",\"cta\":\"Check out our tutorials\"},{\"url\":\"http://localhost:3000/\",\"content\":\"https://posthog.com/blog\",\"cta\":\"Check out our blog\"}]}",
         "required": true,
         "site": true
+      },
+      {
+        "key": "match_mode",
+        "name": "Match mode",
+        "type": "choice",
+        "choices": ["exact", "contains", "wildcard"],
+        "default": "exact",
+        "required": false,
+        "site": true
       }
     ]
   }
